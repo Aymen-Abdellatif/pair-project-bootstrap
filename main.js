@@ -10,7 +10,7 @@ function basalMetabolicRate(weight,length,age,sexe,activitylevel) {
     var bmr = 0;
     console.log(weight,length,age,sexe,activitylevel)
     var calories = 0;
-    if(sexe === "male"){
+    if(sexe === "man"){
        bmr = bmr + ( 66 + (6.23 * weight) + (12.7 * length)- (4.7 * age))
       }
     else {
@@ -30,7 +30,6 @@ function basalMetabolicRate(weight,length,age,sexe,activitylevel) {
         calories= 3050 + bmr
       }
     return calories;
-   alert(calories)
   }
 var calories;
 $('#showCalories').click(function(){ 
@@ -39,8 +38,8 @@ var activitylevel = $( "#activitylevel" ).val();
 var weight= $( "#weight" ).val();
 var length= $( "#length" ).val();
 var age = $( "#age" ).val(); 
-console.log(weight,length,age,sexe,activitylevel)
-calories = basalMetabolicRate(weight,length,age,sexe,activitylevel)
+console.log(weight,length,age,sexe,activitylevel);
+calories = basalMetabolicRate(weight,length,age,sexe,activitylevel);
 
  $("#result").text("You have to consome "+calories+" calories");
    
